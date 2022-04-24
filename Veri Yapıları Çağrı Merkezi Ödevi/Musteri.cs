@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Veri_Yapıları_Çağrı_Merkezi_Ödevi
 {
-    internal class Musteri : CagriMerkezi
+    public class Musteri
     {
+        public int MusteriID { get; set; }
+        public string MusteriTuru { get; set; }
     }
 }
