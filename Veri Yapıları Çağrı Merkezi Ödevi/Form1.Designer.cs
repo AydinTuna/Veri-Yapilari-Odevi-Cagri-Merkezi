@@ -30,6 +30,10 @@
         {
             this.tabCagri = new System.Windows.Forms.TabControl();
             this.musteriGiris = new System.Windows.Forms.TabPage();
+            this.btnTSorgula = new System.Windows.Forms.Button();
+            this.txtTSiraSorgula = new System.Windows.Forms.TextBox();
+            this.lblTSiraSorgula = new System.Windows.Forms.Label();
+            this.btnTicariArama = new System.Windows.Forms.Button();
             this.btnBireyselArama = new System.Windows.Forms.Button();
             this.txtMusteriID = new System.Windows.Forms.TextBox();
             this.lblMusteriID = new System.Windows.Forms.Label();
@@ -48,20 +52,19 @@
             this.txtNotAra = new System.Windows.Forms.TextBox();
             this.lblNotAra = new System.Windows.Forms.Label();
             this.kayitlariGoster = new System.Windows.Forms.TabPage();
+            this.rtxtBMusteriSirasi = new System.Windows.Forms.RichTextBox();
             this.rtxtKayitEkrani = new System.Windows.Forms.RichTextBox();
             this.lblKayitEkrani = new System.Windows.Forms.Label();
             this.rtxtTMusteriSirasi = new System.Windows.Forms.RichTextBox();
             this.lblTMusteriSirasi = new System.Windows.Forms.Label();
             this.lblBMusteriSirasi = new System.Windows.Forms.Label();
             this.notlar = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.rtxtNotlar = new System.Windows.Forms.RichTextBox();
             this.btnNotGonder = new System.Windows.Forms.Button();
-            this.rtxtBMusteriSirasi = new System.Windows.Forms.RichTextBox();
-            this.btnTicariArama = new System.Windows.Forms.Button();
-            this.lblSiraSorgula = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnSorgula = new System.Windows.Forms.Button();
+            this.rtxtNotlar = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnBSorgula = new System.Windows.Forms.Button();
+            this.txtBSiraSorgula = new System.Windows.Forms.TextBox();
+            this.lblBSiraSorgula = new System.Windows.Forms.Label();
             this.tabCagri.SuspendLayout();
             this.musteriGiris.SuspendLayout();
             this.cagriAtama.SuspendLayout();
@@ -85,9 +88,12 @@
             // 
             // musteriGiris
             // 
-            this.musteriGiris.Controls.Add(this.btnSorgula);
-            this.musteriGiris.Controls.Add(this.textBox1);
-            this.musteriGiris.Controls.Add(this.lblSiraSorgula);
+            this.musteriGiris.Controls.Add(this.btnBSorgula);
+            this.musteriGiris.Controls.Add(this.txtBSiraSorgula);
+            this.musteriGiris.Controls.Add(this.lblBSiraSorgula);
+            this.musteriGiris.Controls.Add(this.btnTSorgula);
+            this.musteriGiris.Controls.Add(this.txtTSiraSorgula);
+            this.musteriGiris.Controls.Add(this.lblTSiraSorgula);
             this.musteriGiris.Controls.Add(this.btnTicariArama);
             this.musteriGiris.Controls.Add(this.btnBireyselArama);
             this.musteriGiris.Controls.Add(this.txtMusteriID);
@@ -99,6 +105,42 @@
             this.musteriGiris.TabIndex = 0;
             this.musteriGiris.Text = "Müşteri Giriş";
             this.musteriGiris.UseVisualStyleBackColor = true;
+            // 
+            // btnTSorgula
+            // 
+            this.btnTSorgula.Location = new System.Drawing.Point(172, 272);
+            this.btnTSorgula.Name = "btnTSorgula";
+            this.btnTSorgula.Size = new System.Drawing.Size(75, 23);
+            this.btnTSorgula.TabIndex = 12;
+            this.btnTSorgula.Text = "Sorgula";
+            this.btnTSorgula.UseVisualStyleBackColor = true;
+            this.btnTSorgula.Click += new System.EventHandler(this.btnTSorgula_Click);
+            // 
+            // txtTSiraSorgula
+            // 
+            this.txtTSiraSorgula.Location = new System.Drawing.Point(148, 236);
+            this.txtTSiraSorgula.Name = "txtTSiraSorgula";
+            this.txtTSiraSorgula.Size = new System.Drawing.Size(99, 20);
+            this.txtTSiraSorgula.TabIndex = 10;
+            // 
+            // lblTSiraSorgula
+            // 
+            this.lblTSiraSorgula.AutoSize = true;
+            this.lblTSiraSorgula.Location = new System.Drawing.Point(58, 239);
+            this.lblTSiraSorgula.Name = "lblTSiraSorgula";
+            this.lblTSiraSorgula.Size = new System.Drawing.Size(84, 13);
+            this.lblTSiraSorgula.TabIndex = 9;
+            this.lblTSiraSorgula.Text = "Ticari Müşteri ID";
+            // 
+            // btnTicariArama
+            // 
+            this.btnTicariArama.Location = new System.Drawing.Point(130, 152);
+            this.btnTicariArama.Name = "btnTicariArama";
+            this.btnTicariArama.Size = new System.Drawing.Size(117, 23);
+            this.btnTicariArama.TabIndex = 8;
+            this.btnTicariArama.Text = "Ticari Arama Yap";
+            this.btnTicariArama.UseVisualStyleBackColor = true;
+            this.btnTicariArama.Click += new System.EventHandler(this.btnTicariArama_Click_1);
             // 
             // btnBireyselArama
             // 
@@ -282,6 +324,15 @@
             this.kayitlariGoster.Text = "Kayıtları Göster";
             this.kayitlariGoster.UseVisualStyleBackColor = true;
             // 
+            // rtxtBMusteriSirasi
+            // 
+            this.rtxtBMusteriSirasi.Enabled = false;
+            this.rtxtBMusteriSirasi.Location = new System.Drawing.Point(3, 30);
+            this.rtxtBMusteriSirasi.Name = "rtxtBMusteriSirasi";
+            this.rtxtBMusteriSirasi.Size = new System.Drawing.Size(553, 56);
+            this.rtxtBMusteriSirasi.TabIndex = 6;
+            this.rtxtBMusteriSirasi.Text = "";
+            // 
             // rtxtKayitEkrani
             // 
             this.rtxtKayitEkrani.Enabled = false;
@@ -340,23 +391,6 @@
             this.notlar.Text = "Notlar";
             this.notlar.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Temsilci Notu";
-            // 
-            // rtxtNotlar
-            // 
-            this.rtxtNotlar.Location = new System.Drawing.Point(9, 25);
-            this.rtxtNotlar.Name = "rtxtNotlar";
-            this.rtxtNotlar.Size = new System.Drawing.Size(534, 229);
-            this.rtxtNotlar.TabIndex = 1;
-            this.rtxtNotlar.Text = "";
-            // 
             // btnNotGonder
             // 
             this.btnNotGonder.Location = new System.Drawing.Point(238, 269);
@@ -366,49 +400,48 @@
             this.btnNotGonder.Text = "Gönder";
             this.btnNotGonder.UseVisualStyleBackColor = true;
             // 
-            // rtxtBMusteriSirasi
+            // rtxtNotlar
             // 
-            this.rtxtBMusteriSirasi.Enabled = false;
-            this.rtxtBMusteriSirasi.Location = new System.Drawing.Point(3, 30);
-            this.rtxtBMusteriSirasi.Name = "rtxtBMusteriSirasi";
-            this.rtxtBMusteriSirasi.Size = new System.Drawing.Size(553, 56);
-            this.rtxtBMusteriSirasi.TabIndex = 6;
-            this.rtxtBMusteriSirasi.Text = "";
+            this.rtxtNotlar.Location = new System.Drawing.Point(9, 25);
+            this.rtxtNotlar.Name = "rtxtNotlar";
+            this.rtxtNotlar.Size = new System.Drawing.Size(534, 229);
+            this.rtxtNotlar.TabIndex = 1;
+            this.rtxtNotlar.Text = "";
             // 
-            // btnTicariArama
+            // label2
             // 
-            this.btnTicariArama.Location = new System.Drawing.Point(130, 152);
-            this.btnTicariArama.Name = "btnTicariArama";
-            this.btnTicariArama.Size = new System.Drawing.Size(117, 23);
-            this.btnTicariArama.TabIndex = 8;
-            this.btnTicariArama.Text = "Ticari Arama Yap";
-            this.btnTicariArama.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Temsilci Notu";
             // 
-            // lblSiraSorgula
+            // btnBSorgula
             // 
-            this.lblSiraSorgula.AutoSize = true;
-            this.lblSiraSorgula.Location = new System.Drawing.Point(152, 242);
-            this.lblSiraSorgula.Name = "lblSiraSorgula";
-            this.lblSiraSorgula.Size = new System.Drawing.Size(55, 13);
-            this.lblSiraSorgula.TabIndex = 9;
-            this.lblSiraSorgula.Text = "Müşteri ID";
+            this.btnBSorgula.Location = new System.Drawing.Point(409, 272);
+            this.btnBSorgula.Name = "btnBSorgula";
+            this.btnBSorgula.Size = new System.Drawing.Size(75, 23);
+            this.btnBSorgula.TabIndex = 15;
+            this.btnBSorgula.Text = "Sorgula";
+            this.btnBSorgula.UseVisualStyleBackColor = true;
+            this.btnBSorgula.Click += new System.EventHandler(this.btnBSorgula_Click);
             // 
-            // textBox1
+            // txtBSiraSorgula
             // 
-            this.textBox1.Location = new System.Drawing.Point(213, 239);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(99, 20);
-            this.textBox1.TabIndex = 10;
+            this.txtBSiraSorgula.Location = new System.Drawing.Point(385, 236);
+            this.txtBSiraSorgula.Name = "txtBSiraSorgula";
+            this.txtBSiraSorgula.Size = new System.Drawing.Size(99, 20);
+            this.txtBSiraSorgula.TabIndex = 14;
             // 
-            // btnSorgula
+            // lblBSiraSorgula
             // 
-            this.btnSorgula.Location = new System.Drawing.Point(237, 275);
-            this.btnSorgula.Name = "btnSorgula";
-            this.btnSorgula.Size = new System.Drawing.Size(75, 23);
-            this.btnSorgula.TabIndex = 12;
-            this.btnSorgula.Text = "Sorgula";
-            this.btnSorgula.UseVisualStyleBackColor = true;
-            this.btnSorgula.Click += new System.EventHandler(this.btnSorgula_Click);
+            this.lblBSiraSorgula.AutoSize = true;
+            this.lblBSiraSorgula.Location = new System.Drawing.Point(285, 239);
+            this.lblBSiraSorgula.Name = "lblBSiraSorgula";
+            this.lblBSiraSorgula.Size = new System.Drawing.Size(94, 13);
+            this.lblBSiraSorgula.TabIndex = 13;
+            this.lblBSiraSorgula.Text = "Bireysel Müşteri ID";
             // 
             // cagriMerkezi
             // 
@@ -466,9 +499,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox rtxtBMusteriSirasi;
         private System.Windows.Forms.Button btnTicariArama;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblSiraSorgula;
-        private System.Windows.Forms.Button btnSorgula;
+        private System.Windows.Forms.TextBox txtTSiraSorgula;
+        private System.Windows.Forms.Label lblTSiraSorgula;
+        private System.Windows.Forms.Button btnTSorgula;
+        private System.Windows.Forms.Button btnBSorgula;
+        private System.Windows.Forms.TextBox txtBSiraSorgula;
+        private System.Windows.Forms.Label lblBSiraSorgula;
     }
 }
 

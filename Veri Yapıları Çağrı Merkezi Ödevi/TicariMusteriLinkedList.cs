@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Veri_Yapıları_Çağrı_Merkezi_Ödevi
 {
-    public class BireyselMusteriLinkedList
+    public class TicariMusteriLinkedList
     {
-        public NodeB head;
+        public NodeT head;
         public int sayac = 0;
 
-        public BireyselMusteriLinkedList()
+        public TicariMusteriLinkedList()
         {
             head = null;
         }
@@ -19,8 +19,7 @@ namespace Veri_Yapıları_Çağrı_Merkezi_Ödevi
         // Başa Ekleme
         public void basaEkle(int data)
         {
-            
-            NodeB eleman = new NodeB(data);
+            NodeT eleman = new NodeT(data);
 
             if (head == null)
             {
@@ -59,8 +58,8 @@ namespace Veri_Yapıları_Çağrı_Merkezi_Ödevi
             }
             else
             {
-                NodeB temp = head;
-                NodeB temp2 = null;
+                NodeT temp = head;
+                NodeT temp2 = null;
                 while (temp.next != null)
                 {
                     temp2 = temp;
@@ -101,8 +100,8 @@ namespace Veri_Yapıları_Çağrı_Merkezi_Ödevi
             else
             {
                 int i = 0;
-                NodeB temp = head;
-                NodeB temp2 = temp;
+                NodeT temp = head;
+                NodeT temp2 = temp;
                 while (temp.next != null)
                 {
                     if (i == index)
@@ -123,8 +122,8 @@ namespace Veri_Yapıları_Çağrı_Merkezi_Ödevi
                     sonuc = true;
                     temp2.next = null;
                     Console.WriteLine("Aradan eleman silindi");
-                    sayac--;
                     i++;
+                    sayac--;
                 }
             }
             if (sonuc == false)
@@ -138,8 +137,8 @@ namespace Veri_Yapıları_Çağrı_Merkezi_Ödevi
         public string yazdir()
         {
             mesaj = "";
-            
-            NodeB temp = head;
+
+            NodeT temp = head;
             mesaj += "Son -> ";
             while (temp != null)
             {
@@ -153,7 +152,7 @@ namespace Veri_Yapıları_Çağrı_Merkezi_Ödevi
         public string SiradaArama(int arananEleman)
         {
             int i = sayac + 1;
-            NodeB temp = head;
+            NodeT temp = head;
             while (temp != null)
             {
                 i--;
@@ -165,10 +164,10 @@ namespace Veri_Yapıları_Çağrı_Merkezi_Ödevi
 
 
         // Arama Yapma
-        public int Arama(NodeB head, int x)
+        public int Arama(NodeT head, int x)
         {
             sayac = 0;
-            NodeB current = head;
+            NodeT current = head; 
             while (current != null)
             {
                 if (current.data == x)
@@ -180,15 +179,17 @@ namespace Veri_Yapıları_Çağrı_Merkezi_Ödevi
         }
     }
 
-    public class NodeB
+    public class NodeT
     {
         public int data;
-        public NodeB next;
+        public NodeT next;
 
-        public NodeB(int data)
+        public NodeT(int data)
         {
             this.data = data;
             next = null;
         }
     }
+
+    
 }
